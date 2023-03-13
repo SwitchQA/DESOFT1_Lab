@@ -68,4 +68,67 @@ export function calculateFunctionX(numero:number):number{
 
 //ex.7
 
+export function calcularVolumeCubo(area:number):number {
+    let volume:number = 0;
+    let aresta:number = 0;
+    if (area > 0){
+        aresta = Math.sqrt(area/6);
+        volume = aresta ^ 3;
+    } else {
+        volume = -1;
+    }
+    if (volume <= 1){
+        console.log('Pequeno');
+    } else if (volume > 2){
+        console.log('Grande');
+    } else {
+        console.log('Médio');
+    }
+    return volume
+}
+
+//ex.8
+
+export function apresentarHorasMinutosSegundos (segundosGiven:number){
+    let horas:number = 0;
+    let minutos:number = 0;
+    let segundos:number = 0;
+    if (segundosGiven < 0 || segundosGiven > 86400){
+        console.log('Segundos tem de ser positivo e não pode exceder os segundos de um único dia');
+    } else {
+        horas = Math.floor(segundosGiven/3600)
+        minutos = Math.floor(segundosGiven/60 - (horas * 60))
+        segundos = Math.floor(segundosGiven - (minutos * 60) - (horas * 3600))
+    }
+    console.log('Txiii, tantos segundos já passaram, já vamos em: ' + horas +  ':' + minutos + ':' + segundos);
+}
+
+//ex.9
+
+export function saudacao(segundosGiven:number){
+    if (segundosGiven < 0 || segundosGiven > 86400){
+        console.log('Segundos tem de ser positivo e não pode exceder os segundos de um único dia');
+    } else if (segundosGiven > 21600 && segundosGiven <= 43201) {
+        console.log('Bom dia');
+    } else if (segundosGiven > 43201 && segundosGiven <= 72001) {
+        console.log('Boa tarde');
+    } else {
+        console.log('Boa noite');
+    }
+
+}
+
+//ex.10
+
+export function multiplos (x:number, y:number){
+const remainder:number = x % y
+    if (remainder == 0){
+        console.log('X e Y são múltiplos um do outro');
+    } else {
+        console.log('X e Y não são múltiplos um do outro');
+    }
+}
+
+//ex.11
+
 //export function 

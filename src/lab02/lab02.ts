@@ -27,3 +27,23 @@ ePar(1896);
 
 import { calculateFunctionX } from "./functions";
 console.log('Resultado de X é: ', calculateFunctionX(0));
+
+//ex.7
+
+import { calcularVolumeCubo } from "./functions";
+console.log('Volume é: ', calcularVolumeCubo(-1));
+
+//ex.8
+
+import { apresentarHorasMinutosSegundos } from "./functions";
+apresentarHorasMinutosSegundos(5000);
+
+//ex.9
+
+import { saudacao } from "./functions";
+saudacao(5000);
+
+//ex.10
+
+import { multiplos } from "./functions";
+multiplos(40, 2);
