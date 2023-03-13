@@ -1,2 +1,0 @@
-# DESOFT1_Lab
-
