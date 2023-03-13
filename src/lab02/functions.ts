@@ -7,12 +7,11 @@ export function calcularMediaPesada(nota1:number, nota2:number, nota3:number, pe
 
 //ex.2
 
-export function notaSuperiorOito(nota:number):void{
+export function notaSuperiorOito(nota:number):boolean{
     if (nota > 8){
-        console.log('É superior a oito');
-    } else {
-        console.log('Não é superior a oito'); 
-    }
+        return true;
+    } 
+    return false;
 }
 
 //ex.3
@@ -43,12 +42,14 @@ export function lerTresDigitos(numero:number){
 
 //ex.5
 
-export function ePar(numero:number){
+export function ePar(numero:number):boolean{
     let numeroCheck:number = numero % 2
     if (numeroCheck % 2 == 0){
         console.log('O número é par');
+        return true
     } else {
         console.log('O número não é par');
+        return false
     }
 }
 
@@ -89,46 +90,69 @@ export function calcularVolumeCubo(area:number):number {
 
 //ex.8
 
-export function apresentarHorasMinutosSegundos (segundosGiven:number){
+export function apresentarHorasMinutosSegundos (segundosGiven:number):string{
     let horas:number = 0;
     let minutos:number = 0;
     let segundos:number = 0;
+    let output:string = '';
     if (segundosGiven < 0 || segundosGiven > 86400){
-        console.log('Segundos tem de ser positivo e não pode exceder os segundos de um único dia');
+        output ='Segundos tem de ser positivo e não pode exceder os segundos de um único dia';
     } else {
         horas = Math.floor(segundosGiven/3600)
         minutos = Math.floor(segundosGiven/60 - (horas * 60))
         segundos = Math.floor(segundosGiven - (minutos * 60) - (horas * 3600))
+        output = 'Txiii, tantos segundos já passaram, já vamos em: ' + horas +  ':' + minutos + ':' + segundos;
     }
-    console.log('Txiii, tantos segundos já passaram, já vamos em: ' + horas +  ':' + minutos + ':' + segundos);
+    return output;
 }
 
 //ex.9
 
-export function saudacao(segundosGiven:number){
+export function saudacao(segundosGiven:number):string{
+    let output:string = '';
     if (segundosGiven < 0 || segundosGiven > 86400){
-        console.log('Segundos tem de ser positivo e não pode exceder os segundos de um único dia');
+        output ='Segundos tem de ser positivo e não pode exceder os segundos de um único dia';
     } else if (segundosGiven > 21600 && segundosGiven <= 43201) {
-        console.log('Bom dia');
+        output ='Bom dia';
     } else if (segundosGiven > 43201 && segundosGiven <= 72001) {
-        console.log('Boa tarde');
+        output ='Boa tarde';
     } else {
-        console.log('Boa noite');
+        output ='Boa noite';
     }
+    return output;
 
 }
 
 //ex.10
 
-export function multiplos (x:number, y:number){
+export function multiplos (x:number, y:number):boolean{
 const remainder:number = x % y
     if (remainder == 0){
         console.log('X e Y são múltiplos um do outro');
+        return true;
     } else {
         console.log('X e Y não são múltiplos um do outro');
+        return false;
     }
 }
 
 //ex.11
+
+export function ordemCrescente (numero:number):boolean{
+    let digito1:number = Math.floor(numero/100);
+    let digito2:number = Math.floor(numero%100/10);
+    let digito3:number = Math.floor(numero%10);
+    if (numero < 100 || numero > 999)
+        throw new RangeError('Apenas número com 3 digitos');
+    if (digito1 < digito2 && digito2 < digito3){
+        console.log('A ordem dos digitos é crescente');
+        return true;
+    } else {
+        console.log('A ordem dos digitos não é crescente');
+        return false;
+    }
+}
+
+//ex.12
 
 //export function 

@@ -47,3 +47,8 @@ saudacao(5000);
 
 import { multiplos } from "./functions";
 multiplos(40, 2);
+
+//ex.11
+
+import { ordemCrescente } from "./functions";
+ordemCrescente(23);
