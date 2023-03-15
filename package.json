@@ -1,7 +1,6 @@
 {
   "name": "desoft-lab-classes-support",
   "version": "1.0.0",
-  "description": "",
   "main": "index.html",
   "scripts": {
     "test": "jest --coverage --coverageReporters=\"text\" --coverageReporters=\"html\" --coverageReporters=\"json\"",
@@ -12,6 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.4.1",
+    "@types/node": "^18.15.3",
     "jest": "^29.5.0",
     "jest-html-reporter": "^3.7.0",
     "jest-html-reporters": "^3.1.4",
@@ -62,5 +62,9 @@
       "/node_modules/",
       "/dist/"
     ]
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "description": ""
 }

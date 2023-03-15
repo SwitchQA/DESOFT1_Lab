@@ -51,4 +51,9 @@ multiplos(40, 2);
 //ex.11
 
 import { ordemCrescente } from "./functions";
-ordemCrescente(23);
+ordemCrescente(123);
+
+//ex.15
+
+import { calcularCustoMaisHoras } from "./functions";
+console.log(calcularCustoMaisHoras(2, 2, 2));

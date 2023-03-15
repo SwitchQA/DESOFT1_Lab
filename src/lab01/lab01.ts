@@ -9,6 +9,7 @@
  *
  * @returns Boys and girls' percentage.
  */
+/*
 export function calculateGenderPercentage(boys: number, girls: number): [number, number] {
 
     let total: number = boys + girls;
@@ -37,6 +38,7 @@ export function calculateGenderPercentage(boys: number, girls: number): [number,
  *
  * @returns Boys' percentage.
  */
+/*
 export function calculateBoysPercentage(boys: number, girls: number): number {
 
     let total: number = boys + girls;
@@ -61,6 +63,7 @@ export function calculateBoysPercentage(boys: number, girls: number): number {
  *
  * @returns Girls' percentage.
  */
+/*
 export function calculateGirlsPercentage(boys: number, girls: number): number {
 
     let total: number = boys + girls;
@@ -72,7 +75,7 @@ export function calculateGirlsPercentage(boys: number, girls: number): number {
 
     return girlsPercentage;
 }
-
+*/
 //////////////
 //ex.2
 import { calculatePriceRamo } from "./functions_lab01";
@@ -80,7 +83,7 @@ console.log("Preço do ramo: ", calculatePriceRamo(2,2,2,2));
 
 //ex.3
 import { calculateLitros } from "./functions_lab01";
-console.log("Litros possíveis: ", calculateLitros(2,2,2));
+console.log("Litros possíveis: ", calculateLitros(3,6));
 
 //ex.4
 
@@ -119,8 +122,8 @@ console.log("O resultado é: "+ calcularExpressao);
 
 //ex.11
 
-import { caclularAlturaPredio } from "./functions_lab01";
-console.log("A altura do prédio é: "+ caclularAlturaPredio);
+import { calcularAlturaPredio } from "./functions_lab01";
+console.log("A altura do prédio é: "+ calcularAlturaPredio);
 
 //ex.12
 
@@ -131,3 +134,4 @@ console.log("A altura do edificio é: "+ calcularAlturaEdificio);
 
 import { calcularDistanciaEntrePessoas } from "./functions_lab01";
 console.log("A distância entre os trabalhadores é: "+ calcularDistanciaEntrePessoas);
+

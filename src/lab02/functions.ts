@@ -155,4 +155,109 @@ export function ordemCrescente (numero:number):boolean{
 
 //ex.12
 
-//export function 
+export function calcularDesconto (preco:number):number{
+    let precoComSaldo:number = 0;
+    if (preco > 200){
+        precoComSaldo = preco * 0.6;
+    } else if (preco > 100 && preco <= 200){
+        precoComSaldo = preco * 0.4;
+    } else if (preco > 50 && preco <= 100){
+        precoComSaldo = preco * 0.3;
+    } else if (preco <= 50){
+        precoComSaldo = preco * 0.2;
+    }
+    return precoComSaldo;
+}
+
+//ex.13
+// A função serve para devolver o "status" do estado de uma turma, baseado na percentagem de aprovados. 
+// Recebe um valor compreendido entre 0 e 1 (não inclusivé), e devolve uma string com a qualificação da turma.
+
+export function checkAprovados (aprovados:number):string{
+    let resultado:string = '';
+    if (aprovados < 0 || aprovados > 1){
+        resultado = 'Valor inválido';
+    } else if (aprovados < 0.2 ){
+        resultado = 'Turma Má';
+    } else if (aprovados < 0.5){
+        resultado = 'Turma Fraca';
+    } else if (aprovados < 0.7){
+        resultado = 'Turma Razoável';
+    } else if (aprovados < 0.9){
+        resultado = 'Turma Boa';
+    } else {
+        resultado = 'Turma Excelente';
+    }
+    return resultado;
+}
+
+//ex.14
+
+export function polutionWarning (indicePoluicao:number){
+    let grupo1:number;
+    let grupo2:number;
+    let grupo3:number;
+    let aviso:string = '';
+    if (indicePoluicao > 0.3 && indicePoluicao <= 0.4){
+        aviso = 'Grupo 1 deve suspender atividades';
+    } else if (indicePoluicao > 0.4 && indicePoluicao <= 0.5){
+        aviso = 'Grupo 1 e 2 devem suspender atividades';
+    } else if (indicePoluicao > 0.5){
+        aviso = 'Grupo 1, 2 e 3 devem suspender atividades';
+    }
+    return aviso;
+        
+
+}
+
+//ex.15
+
+export function calcularCustoMaisHoras (areaRelva:number, arvores:number, arbustos:number):string{
+    const precoAreaRelva:number = 10; //por m2
+    const tempoAreaRelva:number = 300; //segundos por m2
+    const precoArvores:number = 20; //cada
+    const tempoArvores:number = 600; //segundos por cada
+    const precoArbustos:number = 15; //cada
+    const tempoArbustos:number = 400; //segundos por cada
+    const custoHora:number = 10; //euros
+    const custoSegundo:number = custoHora / 3600;
+    let segundosTotalAreaRelva:number = (areaRelva * tempoAreaRelva);
+    let segundosTotalArvores:number = (arvores * tempoArvores);
+    let segundosTotalArbustos:number = (arbustos * tempoArbustos);
+    let horasNecessarias:number = (segundosTotalArbustos + segundosTotalAreaRelva + segundosTotalArvores) / 3600;
+    let horasNecessariasArredondado = horasNecessarias.toFixed(2);
+    let custoItem:number = (areaRelva * precoAreaRelva) + (arvores * precoArvores) + (arbustos * precoArbustos);
+    let custoMaoObra:number = (segundosTotalAreaRelva + segundosTotalArvores + segundosTotalArbustos) * custoSegundo;
+    let custoTotal:number = custoItem + custoMaoObra;
+    let custoTotalArredondado = custoTotal.toFixed(2);
+    let custoMaisHoras:string = 'O preço total é: ' + custoTotalArredondado + '€, e vai demorar ' + horasNecessariasArredondado + ' horas.';
+    return custoMaisHoras;
+}
+
+//ex.16
+
+export function calcularMediaKilometros (milhasDia1:number, milhasDia2:number, milhasDia3:number, milhasDia4:number, milhasDia5:number):number{
+    let mediaMilhas:number = (milhasDia1 + milhasDia2 + milhasDia3 + milhasDia4 + milhasDia5) / 5;
+    let mediaKilometros:number = mediaMilhas * 1609;
+    return mediaKilometros;
+}
+
+//ex.17
+
+export function calcularCustoPintura (areaEdificio:number, custoLitroTinta:number, rendimentoLitro:number, salarioDiaPintor:number){
+    const horasTrabalho = 8; //trabalha horas por dia
+    const rendimentoPintor = 2; //m2 por hora
+    let pintoresNecessarios:number;
+    if (areaEdificio > 0 && areaEdificio < 100){
+        pintoresNecessarios = 1
+    } else if (areaEdificio >= 100 && areaEdificio < 300){
+        pintoresNecessarios = 2
+    } else if (areaEdificio >=300 && areaEdificio < 1000){
+        pintoresNecessarios = 3
+    } else if (areaEdificio >= 1000){
+        pintoresNecessarios = 4
+    }
+
+
+    //custoTotalPinturaEdificio
+}
