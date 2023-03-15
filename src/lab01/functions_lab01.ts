@@ -90,5 +90,6 @@ export function calcularAlturaEdificio(alturaPessoa: number, sombraEdificio: num
 
 export function calcularDistanciaEntrePessoas(caboA: number, caboB: number, anguloC: number): number {
     let distanciaPessoas: number = Math.sqrt(caboA ^ 2 + caboB ^ 2 - 2 * caboA * caboB * Math.cos(anguloC));
-    return distanciaPessoas;
+    let distanciaPessoasArredondado:number = Number(distanciaPessoas.toFixed(2));
+    return distanciaPessoasArredondado;
 }

@@ -113,7 +113,7 @@ console.log("Distancia em metros são: ", calcularDistanciaMetros);
 //ex.9
 
 import { calcularDistanciaKilometrosZe } from "./functions_lab01";
-console.log("A distância em kilómetros que o Zé correu foi: %d", calcularDistanciaKilometrosZe(42195,145300,3900));
+console.log("A distância em kilómetros que o Zé correu foi: %d", calcularDistanciaKilometrosZe(3900));
 
 //ex.10
 

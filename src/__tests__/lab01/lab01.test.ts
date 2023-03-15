@@ -306,9 +306,9 @@ describe('Calcular altura edificio baseado na 1. altura da pessoa; 2. altura da 
     test('Sendo a sombra 5 metros', () => {
         //Arrange
         let alturaPessoa:number = 1.8;
-        let sombraPessoa:number = 5;
         let sombraEdificio:number = 30;
-        let expectedalturaEdificio:number = 9999;
+        let sombraPessoa:number = 5;
+        let expectedalturaEdificio:number = 10.8;
 
         //Act
         let alturaEdificio = calcularAlturaEdificio(alturaPessoa, sombraEdificio, sombraPessoa);
@@ -328,7 +328,7 @@ describe('Calcular distância entre duas pessoas baseado em dois cabos A e B, se
         let caboA:number = 10;
         let caboB:number = 15;
         let anguloC:number = 60;
-        let expectedDistancia:number = 9999;
+        let expectedDistancia:number = 16.12;
 
         //Act
         let distancia:number = calcularDistanciaEntrePessoas(caboA, caboB, anguloC);
